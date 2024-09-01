@@ -11,10 +11,11 @@ export const auth = defineAuth({
       google: {
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
-        scopes: ['email', 'profile', 'name'],
+        scopes: ['email', 'profile'],
         attributeMapping: {
           email: 'email',
-          preferredUsername: 'name'
+          preferredUsername: 'name',
+          profilePage: 'profile'
         }
       },
       callbackUrls: [
