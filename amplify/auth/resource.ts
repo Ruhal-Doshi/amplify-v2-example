@@ -12,7 +12,7 @@ export const auth = defineAuth({
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
         attributeMapping: {
-          email: 'email',
+          email: 'profile.email',
         }
       },
       callbackUrls: [
@@ -20,7 +20,7 @@ export const auth = defineAuth({
         'https://main.d1ef8o8d9soh1y.amplifyapp.com/'
       ],
       logoutUrls: ['http://localhost:3000/', 'https://main.d1ef8o8d9soh1y.amplifyapp.com/'],
-      scopes: ['EMAIL']
+      scopes: ['EMAIL', 'PROFILE'],
       
     },
   },
