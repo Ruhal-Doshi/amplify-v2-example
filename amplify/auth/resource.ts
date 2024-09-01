@@ -15,7 +15,6 @@ export const auth = defineAuth({
         attributeMapping: {
           email: 'email',
           preferredUsername: 'name',
-          profilePage: 'profile'
         }
       },
       callbackUrls: [
