@@ -11,22 +11,13 @@ export const auth = defineAuth({
       google: {
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
-        attributeMapping: {
-          email: 'profile.email',
-        }
+        scopes: ['email']
       },
       callbackUrls: [
         'http://localhost:3000/profile',
         'https://main.d1ef8o8d9soh1y.amplifyapp.com/'
       ],
       logoutUrls: ['http://localhost:3000/', 'https://main.d1ef8o8d9soh1y.amplifyapp.com/'],
-      scopes: ['EMAIL', 'PROFILE'],
-      
-    },
-  },
-  userAttributes: {
-    email: {
-      required: true,
     },
   }
 });
